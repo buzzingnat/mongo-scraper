@@ -27,7 +27,7 @@ const config = {
       name: 'mongo-scraper'
     },
     port: process.env.PORT || 3000,
-    db: process.env.MONGODB_URI;
+    db: process.env.MONGODB_URI
   }
 };
 
