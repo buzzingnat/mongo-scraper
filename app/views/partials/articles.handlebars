@@ -1,0 +1,18 @@
+<section class="articlesContainer">
+{{#each articles}}
+	<div class="article soCuteContainer">
+		<div class ="textContainer">
+			<a href="{{this.threadUrl}}">
+				<h2>{{this.title}}</h2>
+			</a>
+			<h5>{{this.author}}</h5>
+		</div>
+		<div class="imgContainer" style="background-image: url({{this.externalLink}});">
+		</div>
+		<div class="articleControls" data-id="{{this._id}}">
+			<button class="displayNotes"><i class="fa fa-sticky-note" aria-hidden="true"></i></button>
+			<button class="deleteArticle"><i class="fa fa-trash" aria-hidden="true"></i></button>
+		</div>
+	</div>
+{{/each}}
+</section>

@@ -1,0 +1,21 @@
+$primary-color: #f90;
+$secondary-color: #d0f;
+$highlight-color: #0f9;
+
+$iconFont: 32px;
+
+.articleControls {
+  width: $iconFont*2;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-$iconFont*2, 0);
+}
+
+.articleControls > button {
+  width: 100%;
+  height: $iconFont*2;
+  font-size: $iconFont;
+  background: darken($highlight-color, 20%);
+  color: lighten($highlight-color, 60%);
+}

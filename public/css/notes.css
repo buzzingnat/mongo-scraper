@@ -1,0 +1,109 @@
+.content.noscroll {
+  position: fixed;
+  overflow: hidden; }
+
+.darkenWorld {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5000;
+  overflow: hidden;
+  background: #333;
+  opacity: .95; }
+
+.notesContainerOuter {
+  display: none;
+  width: 70%;
+  max-height: 100vh;
+  background: white;
+  border: 1px #663d00 solid;
+  z-index: 5000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll; }
+
+#closeNotes {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  border: 1px #663d00 solid;
+  background: white;
+  font-size: 27px;
+  color: #00995c; }
+
+#closeNotes:hover, #closeNotes:active {
+  border: 1px #00663d solid;
+  background: white;
+  color: #995c00; }
+
+#closeNotes > i {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%); }
+
+.singleNoteControls, form .noteControls {
+  width: 72px;
+  margin: 9px auto; }
+
+.singleNoteControls > button, form #newNote {
+  width: 100%;
+  padding: 9px 18px;
+  height: 36px;
+  font-size: 18px;
+  background: #ff9900;
+  color: white; }
+
+form #newNote {
+  color: white;
+  background: #850099; }
+
+form.addNewNote, .singleNoteContainer {
+  margin: 8px 16px;
+  border: 1px #663d00 solid;
+  border-right: #f90 solid 4px;
+  padding: 0 10px; }
+
+.singleNoteContainer:nth-of-type(3n+1) {
+  border-right: #d0f solid 4px; }
+
+.singleNoteContainer:nth-of-type(3n+2) {
+  border-right: #0f9 solid 4px; }
+
+form.addNewNote {
+  border: 1px #663d00 solid;
+  margin: 8px 32px;
+  margin-top: 36px; }
+
+form.addNewNote input, form.addNewNote textarea {
+  display: block;
+  border: 1px #00995c solid;
+  width: 80%;
+  padding: .5em 1em;
+  margin: 5px auto; }
+
+.noteBody {
+  width: 90%;
+  margin: 5px auto; }
+
+.noteBody h2 {
+  display: inline-block;
+  width: 65%; }
+
+.noteBody h3 {
+  display: inline-block;
+  text-align: right;
+  width: 35%; }
+
+.noteBody p {
+  margin: 5px 15px; }

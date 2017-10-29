@@ -1,0 +1,16 @@
+$primary-color: #f90;
+$secondary-color: #d0f;
+$highlight-color: #0f9;
+
+body {
+  // padding: 50px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $secondary-color;
+}

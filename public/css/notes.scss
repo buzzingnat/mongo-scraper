@@ -1,0 +1,133 @@
+$primary-color: #f90;
+$secondary-color: #d0f;
+$highlight-color: #0f9;
+
+$iconFont: 18px;
+
+.content.noscroll {
+  position: fixed;
+  overflow: hidden;
+}
+
+.darkenWorld {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    z-index: 5000;
+    overflow: hidden;
+  background: #333;
+  opacity: .95;
+}
+
+.notesContainerOuter {
+  display: none;
+  width: 70%;
+  max-height: 100vh;
+  background: lighten($primary-color, 70%);
+  border: 1px darken($primary-color, 30%) solid;
+  z-index: 5000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+}
+
+#closeNotes {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: $iconFont*2;
+  height: $iconFont*2;
+  font-size: $iconFont;
+  border: 1px darken($primary-color, 30%) solid;
+  background: lighten($primary-color, 100%);
+  font-size: $iconFont*1.5;
+  color: darken($highlight-color, 20%);
+}
+
+#closeNotes:hover, #closeNotes:active {
+  border: 1px darken($highlight-color, 30%) solid;
+  background: lighten($primary-color, 60%);
+  color: darken($primary-color, 20%);
+}
+
+#closeNotes > i {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.singleNoteControls, form .noteControls {
+  width: $iconFont*4;
+  margin: $iconFont/2 auto;
+}
+
+.singleNoteControls > button, form #newNote {
+  width: 100%;
+  padding: $iconFont/2 $iconFont;
+  height: $iconFont*2;
+  font-size: $iconFont;
+  background: darken($primary-color, 0%);
+  color: lighten($primary-color, 50%);
+}
+
+form #newNote {
+  color: lighten($secondary-color, 60%);
+  background: darken($secondary-color, 20%);
+}
+
+form.addNewNote, .singleNoteContainer {
+    margin: 8px 16px;
+    border: 1px darken($primary-color, 30%) solid;
+    border-right: $primary-color solid 4px;
+    padding: 0 10px;
+}
+
+.singleNoteContainer:nth-of-type(3n+1) {
+  border-right: $secondary-color solid 4px;
+}
+
+.singleNoteContainer:nth-of-type(3n+2) {
+  border-right: $highlight-color solid 4px;
+}
+
+form.addNewNote {
+  border: 1px darken($primary-color, 30%) solid;
+  margin: 8px 32px;
+  margin-top: $iconFont*2;
+}
+
+form.addNewNote input, form.addNewNote textarea {
+  display: block;
+  border: 1px darken($highlight-color, 20%) solid;
+    width: 80%;
+    padding: .5em 1em;
+    margin: 5px auto;
+}
+
+.noteBody {
+    width: 90%;
+    margin: 5px auto;
+}
+
+.noteBody h2 {
+    display: inline-block;
+    width: 65%;
+}
+
+.noteBody h3 {
+    display: inline-block;
+    text-align: right;
+    width: 35%;
+}
+
+.noteBody p {
+    margin: 5px 15px;
+}

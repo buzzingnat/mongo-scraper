@@ -1,0 +1,129 @@
+$primary-color: #f90;
+$secondary-color: #d0f;
+$highlight-color: #0f9;
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// THE BEST VERSION
+
+.articlesContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  left: -1vw;
+  position: relative;
+}
+
+.soCuteContainer {
+  box-sizing: border-box;
+  width: 22%;
+  margin: 5px 10px;
+  flex-grow: 1;
+}
+
+// THE IE FALLBACK
+
+.lte-ie9 {}
+
+.no-flexbox {
+  //if you're using Modernizr
+
+  .articlesContainer {
+    display: block;
+
+    @include clearfix;
+
+    .soCuteContainer {
+      float: left;
+    }
+
+    .soCuteContainer:nth-child(4n+5) {
+      clear: left;
+    }
+  }
+}
+
+// THE TEMPLATE
+
+.articlesContainer {
+  box-sizing: border-box;
+  background-color: lighten($primary-color, 40%);
+  padding: 1rem;
+  width: 100%;
+}
+
+.soCuteContainer {
+  box-sizing: border-box;
+  min-height: 250px;
+  max-width: 100%;
+  width: 400px;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.soCuteContainer > .textContainer {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 30%;
+  transform: translate(0, 70%);
+  width: 80%;
+  background: darken($primary-color, 40%);
+  z-index: 10;
+  padding: 10px;
+  opacity: 0.9;
+}
+
+.textContainer a > h2 {
+  box-sizing: border-box;
+  position: absolute;
+  font-size: 18px;
+  max-height: 3em;
+  color: $secondary-color;
+  overflow: hidden;
+  top: 10%;
+  left: 0%;
+  transform: translate(1%, -40%);
+  width: 100%;
+  padding: 10px;
+}
+
+.textContainer > h5 {
+  position: absolute;
+  box-sizing: border-box;
+  font-size: .85em;
+  top: 0px;
+  left: 0;
+  text-align: right;
+  transform: translate(0, 150%);
+  width: 100%;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  max-height: 26px;
+  overflow: hidden;
+  z-index: 50;
+  color: $highlight-color;
+}
+
+.textContainer > h5:before {
+  content: "by ";
+}
+
+.article .imgContainer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}

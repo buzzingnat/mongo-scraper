@@ -1,0 +1,36 @@
+<div class="notesContainerOuter">
+	<div id="closeNotes"><i class="fa fa-times" title="Close notes screen"></i></div>
+	<form class="addNewNote" data-id="{{this._id}}">
+		<h2>Add a new note</h2>
+		<p>
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title"></input>
+		</p>
+		</p>
+			<label for="author">Author:</label>
+			<input type="text" id="author" name="author"></input>
+		</p>
+		<p>
+			<label for="content">Content:</label>
+			<textarea id="content" name="content"></textarea>
+		</p>
+		<div class="noteControls">
+			<button id="newNote" type="submit">+</button>
+		</div>
+	</form>
+	<div class="notesContainerInner"></div>
+	<!--
+	{{#each notes}}
+		<div class="singleNoteContainer">
+			<div class="noteBody">
+				<h2>{{title}}</h2>
+				<h3>by {{author}}</h3>
+				<p>{{content}}</p>
+			</div>
+			<div class="singleNoteControls" data-id="{{this._id}}">
+				<button class="deleteNote"><i class="fa fa-trash" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	{{/each}}
+	-->
+</div>

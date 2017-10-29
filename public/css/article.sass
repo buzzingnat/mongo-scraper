@@ -1,0 +1,105 @@
+//@import "compass";
+
+$primary-color: #f90
+$secondary-color: #d0f
+$highlight-color: #0f9
+
+.clearfix
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+// THE BEST VERSION
+
+.articlesContainer
+  display: flex
+  flex-wrap: wrap
+
+.soCuteContainer
+  width: 22%
+  margin: 0 4px
+  flex-grow: 1
+
+// THE IE FALLBACK
+
+.lte-ie9, /*if you're using conditional html classes*/
+.no-flexbox /*if you're using Modernizr*/
+
+  .articlesContainer
+    display: block
+    +clearfix
+
+    .soCuteContainer
+      float: left
+
+    .soCuteContainer:nth-child(4n+5) // Clear every 4th child, starting with the 5th
+      clear: left
+
+// THE TEMPLATE
+
+.articlesContainer
+  background-color: #EEE
+  padding: 1rem
+
+.soCuteContainer
+  background-color: #ddd
+  margin-bottom: 0.5rem
+  min-height: 200px
+  min-width: 300px
+  position: relative
+  z-index: 5
+  overflow: hidden
+
+.soCuteContainer img
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%, 0)
+  z-index: -50
+  margin: 0 auto
+
+.soCuteContainer > .textContainer
+  box-sizing: border-box
+  position: absolute
+  top: 0
+  left: 0
+  height: 100px
+  transform: translate(0, 100px)
+  width: 80%
+  background: #222
+  z-index: 10
+  padding: 10px
+  opacity: .90
+
+.textContainer a > h2
+  box-sizing: border-box
+  position: absolute
+  font-size: 20px
+  max-height: 80px
+  color: $secondary-color
+  overflow: hidden
+  top: 30px
+  left: 0%
+  transform: translate(1%, -65%)
+  width: 95%
+  padding: 10px
+
+.textContainer > h5
+  position: absolute
+  box-sizing: border-box
+  font-sizing: 16px
+  top: 60px
+  left: 0
+  text-align: right
+  transform: translate(0, -10%)
+  width: 100%
+  padding-right: 10px
+  padding-bottom: 10px
+  max-height: 26px
+  overflow: hidden
+  z-index: 50
+  color: $highlight-color
+
+.textContainer > h5:before
+  content: "by\00a0"

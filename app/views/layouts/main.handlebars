@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{{title }}</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/article.css">
+	<link rel="stylesheet" href="/css/articleControls.css">
+	<link rel="stylesheet" href="/css/notes.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	{{#if ENV_DEVELOPMENT}}
+	<script src="http://localhost:35729/livereload.js"></script>
+	{{/if}}
+</head>
+<body>
+
+	{{{body}}}
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/controlPanel.js"></script>
+	<script src="/js/articleControlPanel.js"></script>
+	<script src="/js/noteControlPanel.js"></script>
+</body>
+</html>

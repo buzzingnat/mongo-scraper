@@ -1,0 +1,9 @@
+<form id="scrapeSiteForm">
+	<label for="scrapeTarget">Moar cute plz</label>
+	<select name="scrapeTarget" id="scrapeTarget">
+		{{#each subreddits}}
+			<option value="{{@index}}">{{this}}</option>
+		{{/each}}
+	</select>
+	<input type="submit">
+</form>
