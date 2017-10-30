@@ -7,7 +7,7 @@
   left: -1vw;
   position: relative; }
 
-.soCuteContainer {
+.article {
   box-sizing: border-box;
   width: 22%;
   margin: 5px 10px;
@@ -19,9 +19,9 @@
     content: "";
     display: table;
     clear: both; }
-  .no-flexbox .articlesContainer .soCuteContainer {
+  .no-flexbox .articlesContainer .article {
     float: left; }
-  .no-flexbox .articlesContainer .soCuteContainer:nth-child(4n+5) {
+  .no-flexbox .articlesContainer .article:nth-child(4n+5) {
     clear: left; }
 
 .articlesContainer {
@@ -30,7 +30,7 @@
   padding: 1rem;
   width: 100%; }
 
-.soCuteContainer {
+.article {
   box-sizing: border-box;
   min-height: 250px;
   max-width: 100%;
@@ -39,7 +39,7 @@
   z-index: 5;
   overflow: hidden; }
 
-.soCuteContainer > .textContainer {
+.article > .textContainer {
   box-sizing: border-box;
   position: absolute;
   top: 50%;
