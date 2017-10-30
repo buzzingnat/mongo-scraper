@@ -9,5 +9,7 @@
   width: 100%;
   height: 64px;
   font-size: 32px;
-  background: #00995c;
-  color: white; }
+  background: #cf8680;
+  color: #f1ebeb;
+  border: #cea062 solid 1px;
+  margin-bottom: 5px; }

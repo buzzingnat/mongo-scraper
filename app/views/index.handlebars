@@ -1,8 +1,12 @@
 <div class="content">
-  <h1>{{title }}</h1>
-  <p>Welcome to {{title }}</p>
-  {{> controlPanel}}
-{{> articles}}
+	<header class="topOfThePage">
+		<div class="headerImg"></div>
+	  	<h1>{{title}}</h1>
+	  	<p>Welcome to this little bit of the internet built to counteract bad news and bad moods.</p>
+		<p>This page serves as a repository of joy. To gather more, select a topic from the dropdown menu, hit submit, and get a new influx of images. If any images don't bring you joy, delete them! Leave comments if anything tickles your fancy. Read other's comments if you want to endanger your happy mood.</p>
+  		{{> controlPanel}}
+	</header>
+	{{> articles}}
 </div>
 <div class="darkenWorld">
 </div>

@@ -1,6 +1,8 @@
-$primary-color: #f90;
-$secondary-color: #d0f;
-$highlight-color: #0f9;
+$primary-color: #cea062;
+$secondary-color: #99d7d4;
+$highlight-color: #cf8680;
+$white: #f1ebeb;
+$black: #4b3e2e;
 
 body {
   // padding: 50px;
@@ -9,8 +11,40 @@ body {
   padding: 0;
   width: 100vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: $black;
+  background: $white;
 }
 
 a {
   color: $secondary-color;
+}
+
+header {
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 0;
+	padding: 16px 32px;
+    margin-bottom: 16px;
+}
+
+header .headerImg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: url("../../../img/cat-sweet-kitty-animals-57416.jpeg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	margin: 0;
+	opacity: .4;
+}
+
+header h1, header p, header form {
+	margin: 0;
+    padding: 8px 16px;
+    position: relative;
 }

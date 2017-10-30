@@ -13,7 +13,7 @@
   bottom: 0;
   z-index: 5000;
   overflow: hidden;
-  background: #333;
+  background: #4b3e2e;
   opacity: .95; }
 
 .notesContainerOuter {
@@ -21,7 +21,7 @@
   width: 70%;
   max-height: 100vh;
   background: white;
-  border: 1px #663d00 solid;
+  border: 1px #735124 solid;
   z-index: 5000;
   position: fixed;
   top: 50%;
@@ -36,15 +36,15 @@
   width: 36px;
   height: 36px;
   font-size: 18px;
-  border: 1px #663d00 solid;
+  border: 1px #735124 solid;
   background: white;
   font-size: 27px;
-  color: #00995c; }
+  color: #a94840; }
 
 #closeNotes:hover, #closeNotes:active {
-  border: 1px #00663d solid;
+  border: 1px #843832 solid;
   background: white;
-  color: #995c00; }
+  color: #9a6d30; }
 
 #closeNotes > i {
   position: relative;
@@ -61,33 +61,33 @@
   padding: 9px 18px;
   height: 36px;
   font-size: 18px;
-  background: #ff9900;
+  background: #cea062;
   color: white; }
 
 form #newNote {
   color: white;
-  background: #850099; }
+  background: #50bab5; }
 
 form.addNewNote, .singleNoteContainer {
   margin: 8px 16px;
-  border: 1px #663d00 solid;
-  border-right: #f90 solid 4px;
+  border: 1px #735124 solid;
+  border-right: #cea062 solid 4px;
   padding: 0 10px; }
 
 .singleNoteContainer:nth-of-type(3n+1) {
-  border-right: #d0f solid 4px; }
+  border-right: #99d7d4 solid 4px; }
 
 .singleNoteContainer:nth-of-type(3n+2) {
-  border-right: #0f9 solid 4px; }
+  border-right: #cf8680 solid 4px; }
 
 form.addNewNote {
-  border: 1px #663d00 solid;
+  border: 1px #735124 solid;
   margin: 8px 32px;
   margin-top: 36px; }
 
 form.addNewNote input, form.addNewNote textarea {
   display: block;
-  border: 1px #00995c solid;
+  border: 1px #a94840 solid;
   width: 80%;
   padding: .5em 1em;
   margin: 5px auto; }

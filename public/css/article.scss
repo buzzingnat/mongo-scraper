@@ -1,6 +1,8 @@
-$primary-color: #f90;
-$secondary-color: #d0f;
-$highlight-color: #0f9;
+$primary-color: #cea062;
+$secondary-color: #99d7d4;
+$highlight-color: #cf8680;
+$white: #f1ebeb;
+$black: #4b3e2e;
 
 @mixin clearfix {
   &::after {
@@ -54,7 +56,7 @@ $highlight-color: #0f9;
 
 .articlesContainer {
   box-sizing: border-box;
-  background-color: lighten($primary-color, 40%);
+  background-color: $white;
   padding: 1rem;
   width: 100%;
 }
@@ -77,7 +79,7 @@ $highlight-color: #0f9;
   height: 30%;
   transform: translate(0, 70%);
   width: 80%;
-  background: darken($primary-color, 40%);
+  background: $black;
   z-index: 10;
   padding: 10px;
   opacity: 0.9;

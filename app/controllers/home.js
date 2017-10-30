@@ -34,6 +34,13 @@ router.get('/', (req, res, next) => {
                 article.tagImg = false;
                 article.tagVid = true;
             }
+            // don't send articles forward if they don't have correct file endings
+            if (img[img.length -1] === '/' || !img.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/)) {
+                console.log(`\n\n${img} does not belong!!!\n\n`);
+                article.tagImg = null;
+                article.tagVid = null;
+                article.externalLink = null;
+            }
         });
         res.status(200).render('index', {
             title: 'Cute Animals Forever',
