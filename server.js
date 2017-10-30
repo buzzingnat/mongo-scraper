@@ -9,7 +9,13 @@ const glob = require(`glob`);
 const mongoose = require(`mongoose`);
 
 mongoose.Promise = Promise;
-mongoose.connect(config.db, {useMongoClient: true});
+mongoose.connect(config.db, {
+	keepAlive: 1,
+	connectTimeoutMS: 30000,
+	reconnectTries: 30,
+	reconnectInterval: 5000,
+    useMongoClient: true
+});
 const db = mongoose.connection;
 db.on(`error`, () => {
   throw new Error(`unable to connect to database at ` + config.db);

@@ -12,6 +12,7 @@ module.exports = (app) => {
 
 router.get('/', (req, res, next) => {
     Article.find({})
+    .sort({date_created: 'desc'})
     .then(function(articles) {
         console.log(`first article is:`, articles[0], `\nhas type of:`, typeof(articles[0]));
         articles.forEach(function(article, i) {
@@ -49,6 +50,6 @@ router.get('/', (req, res, next) => {
         });
     })
     .catch(function(err) {
-        res.json(err);
+        res.status(500).json(err);
     });
 });

@@ -27,6 +27,10 @@ const ArticleSchema = new Schema({
     type: String,
     required: [true, 'Article must have an author']
   },
+  date_created: {
+    type: Date,
+    default: Date.now
+  },
   notes: [
     {
       type: Schema.Types.ObjectId,

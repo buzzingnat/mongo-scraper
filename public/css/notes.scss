@@ -20,8 +20,8 @@ $iconFont: 18px;
   left: 0;
   right: 0;
   bottom: 0;
-    z-index: 5000;
-    overflow: hidden;
+  z-index: 5000;
+  overflow: hidden;
   background: $black;
   opacity: .95;
 }
@@ -29,6 +29,7 @@ $iconFont: 18px;
 .notesContainerOuter {
   display: none;
   width: 70%;
+  min-width: 280px;
   max-height: 100vh;
   background: lighten($primary-color, 70%);
   border: 1px darken($primary-color, 30%) solid;

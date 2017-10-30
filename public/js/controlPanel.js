@@ -14,7 +14,10 @@ defer(()=> {
 		// console.log(`selected id:`, id);
 		$.get(
 			`/scrape/${id}`,
-			data => console.log(`page scraped. more info:`, data)
+			data => {
+				console.log(`page scraped. more info:`, data);
+				window.location.reload(true);
+			}
 		);
 	});
 });

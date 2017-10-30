@@ -33,9 +33,46 @@ header .headerImg {
   opacity: .4; }
 
 header h1, header p, header form {
-  margin: 0;
   padding: 8px 16px;
   position: relative; }
 
 button {
   cursor: pointer; }
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+form select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #c7afaf;
+  color: #4b3e2e;
+  font-size: 16px;
+  margin: 10px auto;
+  overflow: hidden;
+  padding: 5px 10px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  max-width: 400px; }
+
+header form label {
+  font-size: 20px;
+  font-weight: 800;
+  display: inline-block; }
+
+header form button {
+  font-size: 18px;
+  color: #f1ebeb;
+  background: #cea062;
+  border: 1px solid #9a6d30;
+  display: block;
+  padding: 9px 18px;
+  margin: 8px auto; }

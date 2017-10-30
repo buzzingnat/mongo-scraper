@@ -9,9 +9,12 @@
 
 .article {
   box-sizing: border-box;
-  width: 22%;
-  margin: 5px 10px;
+  width: 25%;
+  margin: 15px 30px 25px 30px;
   flex-grow: 1; }
+
+.article:nth-of-type(7n+4) {
+  width: 45%; }
 
 .no-flexbox .articlesContainer {
   display: block; }
@@ -31,12 +34,10 @@
   width: 100%; }
 
 .article {
-  box-sizing: border-box;
   min-height: 250px;
   max-width: 100%;
-  width: 400px;
+  min-width: 150px;
   position: relative;
-  z-index: 5;
   overflow: hidden; }
 
 .article > .textContainer {

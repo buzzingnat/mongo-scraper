@@ -19,6 +19,7 @@
 .notesContainerOuter {
   display: none;
   width: 70%;
+  min-width: 280px;
   max-height: 100vh;
   background: white;
   border: 1px #735124 solid;
