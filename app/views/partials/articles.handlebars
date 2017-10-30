@@ -9,15 +9,15 @@
 			<h5>{{this.author}}</h5>
 		</div>
 		{{#if this.tagImg}}
-			<div class="imgContainer" style="background-image: url({{this.externalLink}});">
-				<img style="height: 100%; width: 100%; object-fit: cover;" src="{{this.externalLink}}">
+			<div class="imgContainer">
+				<img src="{{this.externalLink}}">
 			</div>
 		{{/if}}
 		{{#if this.tagVid}}
 			<div class="imgContainer">
 			<!-- gfycat sites: https://[[giant]].(bodyOfLink - [[https://]]).[[mp4]] -->
 			<!-- imgur sites: (bodyOfLink - [[.gifv]] + .[[mp4]]) -->
-				<video autoplay="" loop="" muted="" style="max-width:100%; height:auto; margin:10px 10px 10px 0;" src="{{this.externalLink}}">
+				<video autoplay loop muted src="{{this.externalLink}}">
 				</video>
 			</div>
 		{{/if}}

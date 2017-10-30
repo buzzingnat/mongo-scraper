@@ -36,3 +36,6 @@ header h1, header p, header form {
   margin: 0;
   padding: 8px 16px;
   position: relative; }
+
+button {
+  cursor: pointer; }
