@@ -34,31 +34,31 @@
   width: 100%; }
 
 .article {
-  min-height: 250px;
+  min-height: 300px;
   max-width: 100%;
   min-width: 150px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 3px 5px 3px #8a7255; }
 
 .article > .textContainer {
   box-sizing: border-box;
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 0;
-  height: 30%;
-  transform: translate(0, 70%);
+  height: 100px;
+  transform: translate(0, -100%);
   width: 80%;
-  background: #4b3e2e;
+  background: #f8f2ea;
   z-index: 10;
-  padding: 10px;
-  opacity: 0.9; }
+  padding: 10px; }
 
 .textContainer a > h2 {
   box-sizing: border-box;
   position: absolute;
   font-size: 18px;
   max-height: 3em;
-  color: #99d7d4;
+  color: #74c9c5;
   overflow: hidden;
   top: 10%;
   left: 0%;
@@ -80,7 +80,7 @@
   max-height: 26px;
   overflow: hidden;
   z-index: 50;
-  color: #cf8680; }
+  color: #ba5148; }
 
 .textContainer > h5:before {
   content: "by "; }

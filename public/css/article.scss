@@ -66,26 +66,25 @@ $black: #4b3e2e;
 }
 
 .article {
-  min-height: 250px;
+  min-height: 300px;
   max-width: 100%;
   min-width: 150px;
   position: relative;
-  // z-index: 5;
   overflow: hidden;
+  box-shadow: 3px 5px 3px lighten($black, 20%);
 }
 
 .article > .textContainer {
   box-sizing: border-box;
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 0;
-  height: 30%;
-  transform: translate(0, 70%);
+  height: 100px;
+  transform: translate(0, -100%);
   width: 80%;
-  background: $black;
+  background: lighten($primary-color, 35%);
   z-index: 10;
   padding: 10px;
-  opacity: 0.9;
 }
 
 .textContainer a > h2 {
@@ -93,7 +92,7 @@ $black: #4b3e2e;
   position: absolute;
   font-size: 18px;
   max-height: 3em;
-  color: $secondary-color;
+  color: darken($secondary-color, 10%);
   overflow: hidden;
   top: 10%;
   left: 0%;
@@ -116,7 +115,7 @@ $black: #4b3e2e;
   max-height: 26px;
   overflow: hidden;
   z-index: 50;
-  color: $highlight-color;
+  color: darken($highlight-color, 15%);
 }
 
 .textContainer > h5:before {

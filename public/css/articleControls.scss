@@ -7,19 +7,23 @@ $black: #4b3e2e;
 $iconFont: 32px;
 
 .articleControls {
-  width: $iconFont*2;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  transform: translate(-$iconFont*2, 0);
+      width: 20%;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+    background: lighten($primary-color, 35%);
 }
 
 .articleControls > button {
   width: 100%;
-  height: $iconFont*2;
+  height: $iconFont*1.5;
   font-size: $iconFont;
   background: $highlight-color;
   color: $white;
-  border: $primary-color solid 1px;
+  border: darken($highlight-color, 20%) solid 1px;
+}
+
+.articleControls > button:first-of-type {
   margin-bottom: 5px;
 }

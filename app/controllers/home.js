@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
             let img = article.externalLink;
             // gfycat sites: https://[[giant]].(bodyOfLink - [[https://]]).[[mp4]]
             // imgur sites: (bodyOfLink - [[.gifv]] + .[[mp4]])
-            if (img.includes(`.gifv`) && img.includes(`https://i.imgur`)) {
+            if (img.includes(`.gifv`) && img.includes(`i.imgur`)) {
                 article.externalLink = img.replace(`.gifv`, `.mp4`);
                 article.tagImg = false;
                 article.tagVid = true;
@@ -29,14 +29,19 @@ router.get('/', (req, res, next) => {
             // convert this: https://gfycat.com/ElaborateAmusingHorseshoecrab
             // convert to:   https://giant.gfycat.com/ElaborateAmusingHorseshoecrab
             if (img.includes(`gfycat`)) {
-                console.log(`${i} image needs converting:`, img);
+                //console.log(`${i} image needs converting:`, img);
                 article.externalLink = img.replace(`gfycat.`, `giant.gfycat.`) + `.mp4`;
-                console.log(`${i} has been converted:`, article.externalLink);
+                //console.log(`${i} has been converted:`, article.externalLink);
                 article.tagImg = false;
                 article.tagVid = true;
             }
             // don't send articles forward if they don't have correct file endings
-            if (img[img.length -1] === '/' || !img.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/)) {
+            if (img[img.length -1] === '/'
+                || (
+                    !img.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|jpeg)/)
+                    && !img.includes(`gfycat`)
+                    )
+                ) {
                 console.log(`\n\n${img} does not belong!!!\n\n`);
                 article.tagImg = null;
                 article.tagVid = null;

@@ -23,17 +23,33 @@ router.get("/scrape/:index", function(req, res) {
 	    // should I turn this into a bunch of promises?
 	    // then I can use .then() when they are finished to run a bulk create...
 	    $(".thing.link").each(function(i, element) {
-	      var result = {};
-	      result.title = $(this)
-	        .find("a.title")
-	        .text();
-	      result.externalLink = $(this).attr("data-url"); //should always be an image/gif/video!
-	      result.threadUrl = `https://www.reddit.com` + $(this)
-	        .attr("data-permalink");
-	      result.author = $(this)
-	        .find("a.author")
-	        .text();
-	        results.push(result);
+			var result = {};
+			result.title = $(this)
+				.find("a.title")
+				.text();
+			result.externalLink = $(this).attr("data-url"); //should always be an image/gif/video!
+			const img = result.externalLink;
+			result.threadUrl = `https://www.reddit.com` + $(this)
+				.attr("data-permalink");
+			result.author = $(this)
+				.find("a.author")
+				.text();
+            // don't save articles if they don't have correct file endings
+            if (img.includes(`.gifv`) && img.includes(`i.imgur`)) {
+            	//console.log(`special case: ${img}`);
+				results.push(result);
+            }
+            // convert this: https://gfycat.com/ElaborateAmusingHorseshoecrab
+            // convert to:   https://giant.gfycat.com/ElaborateAmusingHorseshoecrab
+            if (img.includes(`gfycat`)) {
+            	//console.log(`special case: ${img}`);
+                results.push(result);
+            }
+            if (img[img.length -1] === '/' || !img.match(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|gifv)/)) {
+                //console.log(`\n\n${img} does not belong!!!\n\n`);
+                return results;
+            }
+            return results.push(result);
 	    });
 		// Create a new Article using the `result` object built from scraping
 		// , {runValidators: true, context: 'query'}
@@ -63,6 +79,8 @@ router.get("/articles", function(req, res) {
 router.get(`/article/emptyAll`, function(request, response) {
 	Article.remove({})
 	.then(function(dbArticle) {
+		// idea: use forEach to make an array of promises to delete each note,
+		// then resolve them with a Promise.all()
       // If all Users are successfully found, send them back to the client
       response.json(dbArticle);
     })
@@ -76,11 +94,11 @@ router.get(`/article/emptyAll`, function(request, response) {
 router.get(`/article/deleteOne/:id`, function(request, response) {
 	Article.findByIdAndRemove(request.params.id)
 	.then(function(dbArticle) {
-      // If all Users are successfully found, send them back to the client
-      response.json(dbArticle);
+		// then delete all associated notes
+		Note.findByIdAndRemove(request.params.noteId)
+      	response.json(dbArticle);
     })
     .catch(function(err) {
-      // If an error occurs, send the error back to the client
-      response.json(err);
+      	response.json(err);
     });
 });

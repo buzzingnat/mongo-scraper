@@ -1,15 +1,18 @@
 .articleControls {
-  width: 64px;
+  width: 20%;
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 100%;
-  transform: translate(-64px, 0); }
+  transform: translate(-100%, -100%);
+  background: #f8f2ea; }
 
 .articleControls > button {
   width: 100%;
-  height: 64px;
+  height: 48px;
   font-size: 32px;
   background: #cf8680;
   color: #f1ebeb;
-  border: #cea062 solid 1px;
+  border: #a94840 solid 1px; }
+
+.articleControls > button:first-of-type {
   margin-bottom: 5px; }
